@@ -12,6 +12,7 @@ dependencies = [
     "matplotlib>=3.10.6",
     "metrics>=0.0.2",
     "numpy>=2.3.3",
+    "pip>=25.2",
     "pydantic>=2.11.9",
     "scipy>=1.16.2",
     "spacy>=3.8.7",
