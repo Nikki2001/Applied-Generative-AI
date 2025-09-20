@@ -14,7 +14,6 @@ class BigramModel:
         """Simple tokenizer that splits text into words."""
         # Convert to lowercase and extract words using regex
         tokens = re.findall(r"\b\w+\b", text.lower())
-        print("LOOK HERE TOKENS", tokens)
         if not self.frequency_threshold:
             return tokens
         # Count word frequencies
@@ -30,8 +29,7 @@ class BigramModel:
         """Analyze text to compute bigram probabilities."""
         words = self.simple_tokenizer(text)
         bigrams = list(zip(words[:-1], words[1:]))  # Create bigrams
-        print("LOOK HERE", bigrams)
-  
+
         # Count bigram and unigram frequencies
         bigram_counts = Counter(bigrams)
         unigram_counts = Counter(words)

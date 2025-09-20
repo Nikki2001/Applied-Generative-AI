@@ -44,8 +44,11 @@ def generate_text(request: TextGenerationRequest):
 
 @app.post("/embeddings")
 def embeddings(request: EmbeddingRequest):
-    print("LOOK FOR REQUEST WORD", request.word)
-    print(nlp)
     emb_word = nlp(request.word)
-    print("LOOK FOR WORD", emb_word)
-    return emb_word.vector
+    return emb_word.vector.tolist()
+
+#Push to Git
+#git status - check which files were updated
+#git add .
+#git commit -m "Insert Comment" 
+#git push
